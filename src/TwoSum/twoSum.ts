@@ -41,7 +41,24 @@ function twoSum1(nums: number[], target: number): void {
     }
 };
 
+function twoSum(nums: number[], target: number): number[] {
+    let numberMap = new Map();
 
-let nums = [11,3,2,4,15];
+    for (let i = 0; i < nums.length; i++){
+        let difference = target - nums[i];
+
+        if (numberMap.has(difference)){
+            return [numberMap.get(difference), i];
+        }
+        else{
+            numberMap.set(nums[i], i);
+        }
+    }
+
+    return [];
+}
+
+let nums = [3,3];
 let target = 6;
-// twoSum(nums, target);
+let result = twoSum(nums, target);
+console.log(`result is: [${result}]`)
