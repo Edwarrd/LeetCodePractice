@@ -1,0 +1,11 @@
+{
+    "suites" : [ {
+        "name": "twoSum",
+        "path": "./TwoSum/twoSum.ts"
+    },
+     {
+        "name": "addTwoNum",
+        "path": ""
+    }
+]
+}
